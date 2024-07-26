@@ -1,0 +1,14 @@
+- name: Deploy application
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure Python is installed
+      apt:
+        name: python3
+        state: present
+
+    - name: Ensure Dcoker is installed
+      apt:
+        name: docker.io
+        state: present
+
